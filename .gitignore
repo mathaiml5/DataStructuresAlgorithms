@@ -9,3 +9,12 @@ out
 
 # Ignore IntelliJ .iml files
 .iml
+
+#Ignore png files
+.png
+
+#Ignore jpg files
+.[jpg|jpeg]
+
+#Ignore pdf files
+.pdf
