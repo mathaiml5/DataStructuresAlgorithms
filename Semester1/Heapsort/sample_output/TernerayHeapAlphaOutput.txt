@@ -1,0 +1,215 @@
+************************************************************************************************************************
+********************************************* d-Ary HeapSort Tester ****************************************************
+************************************************************************************************************************
+This program tests the heapsrot algorithm for any multiway (d-ary) heap. For example specifying d=2 creates a binary heap and specifying
+3 builds and sorts a list of items using a ternary heap. The user can either input a string of characters which they wish to use
+to create the heap OR it can generate random list of numbers with a user specified range. The program creates maximum order Priority Queue and 
+sorts them in-place using heapsort. The program prints the output for each step of heapify and each sink step in the heapsort algorithm
+We also print a horizontal dendrogram style visualization of the final of the n-ary tree as well as the array contents during during each step.
+************************************************************************************************************************
+Input types Menu:
+[1] Random list of integers in a range
+[2] User specified string of characters
+Enter the input type you will use.
+(Enter 1 or 2 for the input type) > 
+2
+(Enter the heap's tree order (n-ary) or multiway parameter (e.g. 2= binary, 3 = ternary) allowed up to 20-way trees)> 
+3
+Enter the string of charcaters that you want to construct heap and perform heapsort with.
+Only alphabetic characters and any whitespaces will be ignored
+Enter the string whose characters you want to create the heap with > 
+THEQUICKBROWNFOXJUMPSOVERALAZYDOG
+Initial string of characters that are input for Heap & initial tree: 
+************************************************************************************************************************
+T H E Q U I C K B R O W N F O X J U M P S O V E R A L A Z Y D O G 
+************************************************************************************************************************
+T
++--- H
+|    +--- U
+|    |    +--- F
+|    |    +--- O
+|    |    +--- X
+|    +--- I
+|    |    +--- J
+|    |    +--- U
+|    |    +--- M
+|    +--- C
+|    |    +--- P
+|    |    +--- S
+|    |    +--- O
++--- E
+|    +--- K
+|    |    +--- V
+|    |    +--- E
+|    |    +--- R
+|    +--- B
+|    |    +--- A
+|    |    +--- L
+|    |    +--- A
+|    +--- R
+|    |    +--- Z
+|    |    +--- Y
+|    |    +--- D
++--- Q
+|    +--- O
+|    |    +--- O
+|    |    +--- G
+|    +--- W
+|    +--- N
+************************************************************************************************************************
+Calling Heapsort: Heapify followed by sortdown: 
+33	11	T H E Q U I C K B R O W N F O X J U M P S O V E R A L A Z Y D O G 
+33	10	T H E Q U I C K B Z O W N F O X J U M P S O V E R A L A R Y D O G 
+33	9	T H E Q U I C K L Z O W N F O X J U M P S O V E R A B A R Y D O G 
+33	8	T H E Q U I C V L Z O W N F O X J U M P S O K E R A B A R Y D O G 
+33	7	T H E Q U I S V L Z O W N F O X J U M P C O K E R A B A R Y D O G 
+33	6	T H E Q U U S V L Z O W N F O X J I M P C O K E R A B A R Y D O G 
+33	5	T H E Q X U S V L Z O W N F O U J I M P C O K E R A B A R Y D O G 
+33	4	T H E W X U S V L Z O Q N F O U J I M P C O K E R A B A R Y D O G 
+33	3	T H Z W X U S V L Y O Q N F O U J I M P C O K E R A B A R E D O G 
+33	2	T X Z W U U S V L Y O Q N F O H J I M P C O K E R A B A R E D O G 
+33	1	Z X Y W U U S V L T O Q N F O H J I M P C O K E R A B A R E D O G 
+************************************************************************************************************************
+Array & Tree After Heapify Phase: 
+************************************************************************************************************************
+Z X Y W U U S V L T O Q N F O H J I M P C O K E R A B A R E D O G 
+************************************************************************************************************************
+Z
++--- X
+|    +--- U
+|    |    +--- F
+|    |    +--- O
+|    |    +--- H
+|    +--- U
+|    |    +--- J
+|    |    +--- I
+|    |    +--- M
+|    +--- S
+|    |    +--- P
+|    |    +--- C
+|    |    +--- O
++--- Y
+|    +--- V
+|    |    +--- K
+|    |    +--- E
+|    |    +--- R
+|    +--- L
+|    |    +--- A
+|    |    +--- B
+|    |    +--- A
+|    +--- T
+|    |    +--- R
+|    |    +--- E
+|    |    +--- D
++--- W
+|    +--- O
+|    |    +--- O
+|    |    +--- G
+|    +--- Q
+|    +--- N
+************************************************************************************************************************
+Sortdown phase: 
+************************************************************************************************************************
+32	1	Y X V W U U S R L T O Q N F O H J I M P C O K E G A B A R E D O Z 
+************************************************************************************************************************
+31	1	X U V W U O S R L T O Q N F O H J I M P C O K E G A B A R E D Y Z 
+************************************************************************************************************************
+30	1	W U V Q U O S R L T O D N F O H J I M P C O K E G A B A R E X Y Z 
+************************************************************************************************************************
+29	1	V U T Q U O S R L E O D N F O H J I M P C O K E G A B A R W X Y Z 
+************************************************************************************************************************
+28	1	U U T Q R O S R L E O D N F O H J I M P C O K E G A B A V W X Y Z 
+************************************************************************************************************************
+27	1	U S T Q R O P R L E O D N F O H J I M A C O K E G A B U V W X Y Z 
+************************************************************************************************************************
+26	1	T S R Q R O P K L E O D N F O H J I M A C O B E G A U U V W X Y Z 
+************************************************************************************************************************
+25	1	S R R Q O O P K L E O D N F A H J I M A C O B E G T U U V W X Y Z 
+************************************************************************************************************************
+24	1	R R L Q O O P K G E O D N F A H J I M A C O B E S T U U V W X Y Z 
+************************************************************************************************************************
+23	1	R P L Q O O O K G E O D N F A H J I M A C E B R S T U U V W X Y Z 
+************************************************************************************************************************
+22	1	Q P L O O O O K G E B D N F A H J I M A C E R R S T U U V W X Y Z 
+************************************************************************************************************************
+21	1	P O L O O O E K G E B D N F A H J I M A C Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+20	1	O O L N O O E K G E B D C F A H J I M A P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+19	1	O O L N O M E K G E B D C F A H J I A O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+18	1	O O L N H M E K G E B D C F A A J I O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+17	1	O M L N H I E K G E B D C F A A J O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+16	1	N M L J H I E K G E B D C F A A O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+15	1	M I L J H A E K G E B D C F A N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+14	1	L I K J H A E A G E B D C F M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+13	1	K I G J H A E A F E B D C L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+12	1	J I G C H A E A F E B D K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+11	1	I H G C D A E A F E B J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+10	1	H E G C D A B A F E I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+9	1	G E E C D A B A F H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+8	1	F E E C D A B A G H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+7	1	E E A C D A B F G H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+6	1	E D A C B A E F G H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+5	1	D A A C B E E F G H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+4	1	C A A B D E E F G H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+3	1	B A A C D E E F G H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+2	1	A A B C D E E F G H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+1	1	A A B C D E E F G H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+************************************************************************************************************************
+Final Sorted Array and Tree: 
+A A B C D E E F G H I J K L M N O O O O P Q R R S T U U V W X Y Z 
+************************************************************************************************************************
+A
++--- A
+|    +--- D
+|    |    +--- L
+|    |    +--- M
+|    |    +--- N
+|    +--- E
+|    |    +--- O
+|    |    +--- O
+|    |    +--- O
+|    +--- E
+|    |    +--- O
+|    |    +--- P
+|    |    +--- Q
++--- B
+|    +--- F
+|    |    +--- R
+|    |    +--- R
+|    |    +--- S
+|    +--- G
+|    |    +--- T
+|    |    +--- U
+|    |    +--- U
+|    +--- H
+|    |    +--- V
+|    |    +--- W
+|    |    +--- X
++--- C
+|    +--- I
+|    |    +--- Y
+|    |    +--- Z
+|    +--- J
+|    +--- K
+
+Process finished with exit code 0
