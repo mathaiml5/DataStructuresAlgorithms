@@ -30,6 +30,6 @@ Maze generation process:
 * Note: Maze will be assumed to always start from cell in top left corner and end at the cell in the bottom right corner  
 
 ### Example Maze 
-Sample Image: ![Example Image](/MazeImage.png "Final Maze")
+Sample Image: ![Example Image](MazeImage.png "Final Maze")
                                                                                                                                                                          
                                                                                                                                   
