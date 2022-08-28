@@ -1,6 +1,13 @@
 ## Assignment 3
 ### Linked List
-The InteractiveTest is the runner class that lets the user perform various list operations on the LinkedListDeque Doubly Linked List such as add/remove elements, and other operations
+
+LinkedListDeque class defines the Doubly Linked List and all the relevant methods to create the list, add/remove elements, and other operations
+Uses an inner class DoubleNode to represent each node that has the element which can be any object (from class or type <T>)                  
+Also includes a sample test method to test list operations on integers 
+
+LinkedListTester class is the runner class that tests the various scenarios for operation performed on the LinkedListDeque Doubly Linked List such as add/remove elements, and other operations Since this is only a runner or tester class there are no member variables or methods needed                                                                                                                                        
+
+The InteractiveTester class is the runner class that lets the user perform various list operations on the LinkedListDeque Doubly Linked List such as add/remove elements, and other operations
 Since this is only a runner or tester class there are no member variables or methods needed
 The program is designed to be friendly and prompt/guide the user at each stage:
 1. A menu of commands 0-9 which represent various list operations available are presented
