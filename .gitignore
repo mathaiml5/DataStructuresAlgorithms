@@ -1,0 +1,11 @@
+# Ignore Mac system files
+.DS_store
+
+#Ignore class files
+.class
+
+# Ignore out folder from IntelliJ
+out
+
+# Ignore IntelliJ .iml files
+.iml
