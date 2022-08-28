@@ -1,0 +1,87 @@
+************************************************************************************************************************
+***************************** LINKED LIST (DEQUE) NATURAL MERGESORT ****************************************************
+************************************************************************************************************************
+We build a LinkedList based a comma separated sequence of numbers or strings that user is prompted to input. We then demonstrate an 
+in-place natural mergesort to sort the input list. We show how list traversal and merging of sublists are done during each iteration.
+The tester initializes a linked list with the inputs in the order entered by user and then performs 
+natural mergesort on that LinkedList. For each test iteration, the input and output lists from the merge
+operations are printed and then the final list after each iteration is also shown.
+************************************************************************************************************************
+NOTE: If any item in your list contains commas, input those items within double quotes.
+Leading and trailing whitespaces in each element are ignored.
+Enter Input List to be Sorted (comma separated)> M, E, R, G, E, S, O, R, T, E, X, A, M, P, L,     E
+========================================================================================================================
+List Before Sorting: <Head>M -> E -> R -> G -> E -> S -> O -> R -> T -> E -> X -> A -> M -> P -> L -> E<Tail>
+========================================================================================================================
+Iteration #1 Merge #1:
+1st Sorted SubList is: <Head>M<Tail>
+2nd Sorted SubList is: <Head>E -> R<Tail>
+After merging sublists, the Merged List is: <Head>E -> M -> R<Tail>
+
+Iteration #1 Merge #2:
+1st Sorted SubList is: <Head>G<Tail>
+2nd Sorted SubList is: <Head>E -> S<Tail>
+After merging sublists, the Merged List is: <Head>E -> G -> S<Tail>
+
+Iteration #1 Merge #3:
+1st Sorted SubList is: <Head>O -> R -> T<Tail>
+2nd Sorted SubList is: <Head>E -> X<Tail>
+After merging sublists, the Merged List is: <Head>E -> O -> R -> T -> X<Tail>
+
+Iteration #1 Merge #4:
+1st Sorted SubList is: <Head>A -> M -> P<Tail>
+2nd Sorted SubList is: <Head>L<Tail>
+After merging sublists, the Merged List is: <Head>A -> L -> M -> P<Tail>
+
+Iteration #1 Merge #5:
+1st Sorted SubList is: <Head>E<Tail>
+2nd Sorted SubList is: Empty!
+After merging sublists, the Merged List is: <Head>E<Tail>
+
+========================================================================================================================
+After Iteration 1 List is :<Head>E -> M -> R -> E -> G -> S -> E -> O -> R -> T -> X -> A -> L -> M -> P -> E<Tail>
+========================================================================================================================
+Iteration #2 Merge #1:
+1st Sorted SubList is: <Head>E -> M -> R<Tail>
+2nd Sorted SubList is: <Head>E -> G -> S<Tail>
+After merging sublists, the Merged List is: <Head>E -> E -> G -> M -> R -> S<Tail>
+
+Iteration #2 Merge #2:
+1st Sorted SubList is: <Head>E -> O -> R -> T -> X<Tail>
+2nd Sorted SubList is: <Head>A -> L -> M -> P<Tail>
+After merging sublists, the Merged List is: <Head>A -> E -> L -> M -> O -> P -> R -> T -> X<Tail>
+
+Iteration #2 Merge #3:
+1st Sorted SubList is: <Head>E<Tail>
+2nd Sorted SubList is: Empty!
+After merging sublists, the Merged List is: <Head>E<Tail>
+
+========================================================================================================================
+After Iteration 2 List is :<Head>E -> E -> G -> M -> R -> S -> A -> E -> L -> M -> O -> P -> R -> T -> X -> E<Tail>
+========================================================================================================================
+Iteration #3 Merge #1:
+1st Sorted SubList is: <Head>E -> E -> G -> M -> R -> S<Tail>
+2nd Sorted SubList is: <Head>A -> E -> L -> M -> O -> P -> R -> T -> X<Tail>
+After merging sublists, the Merged List is: <Head>A -> E -> E -> E -> G -> L -> M -> M -> O -> P -> R -> R -> S -> T -> X<Tail>
+
+Iteration #3 Merge #2:
+1st Sorted SubList is: <Head>E<Tail>
+2nd Sorted SubList is: Empty!
+After merging sublists, the Merged List is: <Head>E<Tail>
+
+========================================================================================================================
+After Iteration 3 List is :<Head>A -> E -> E -> E -> G -> L -> M -> M -> O -> P -> R -> R -> S -> T -> X -> E<Tail>
+========================================================================================================================
+Iteration #4 Merge #1:
+1st Sorted SubList is: <Head>A -> E -> E -> E -> G -> L -> M -> M -> O -> P -> R -> R -> S -> T -> X<Tail>
+2nd Sorted SubList is: <Head>E<Tail>
+After merging sublists, the Merged List is: <Head>A -> E -> E -> E -> E -> G -> L -> M -> M -> O -> P -> R -> R -> S -> T -> X<Tail>
+
+========================================================================================================================
+After Iteration 4 List is :<Head>A -> E -> E -> E -> E -> G -> L -> M -> M -> O -> P -> R -> R -> S -> T -> X<Tail>
+========================================================================================================================
+========================================================================================================================
+List After Sorting: <Head>A -> E -> E -> E -> E -> G -> L -> M -> M -> O -> P -> R -> R -> S -> T -> X<Tail>
+========================================================================================================================
+
+Process finished with exit code 0
